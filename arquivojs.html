@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    function calcularDoisNumeros(num1, num2, operacao){
+
+        let resposta
+
+        if(operacao == "*"){
+            resposta= multiplicar (num1,num2)
+
+        }
+
+        let resposta= divisao (num1,num2)
+
+        document.getElementById("resultado").innerHTML = resposta
+
+    }
+
+    function multiplicar(num1, num2){
+        return num1 * num2
+    }
+
+    function divisao(num1, num2){
+        return num1 / num2
+    }
+    </script>
+
+
+    <button onclick="calcularDoisNumeros(2,5'*)">
+        Calcular
+    </button>
+
+<p id="resultado">
+
+</p>
+
+    
+</body>
+</html>

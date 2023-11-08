@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cadastodealunos.js"></script>
+
+</head>
+<body>
+
+    <h1>Cadastro De Alunos</h1>
+
+<form id="MeuForm">
+
+    <label for="Nome">Nome</label><br>
+    <input type="text" id="nome" name="nome"><br>
+
+    <label for="Sobrenome">Sobrenome</label><br>
+    <input type="text" id="sobrenome" name="sobrenome"><br>
+
+    <label for="Idade">Idade</label><br>
+    <input type="text" id="idade" name="idade"><br><br>
+
+    <input type="submit" value="Enviar">
+
+</form>
+
+<p id="resultado"></p>
+
+    <script>
+        const form = document.getElementById('MeuForm');
+        const resultado = document.getElementById('resultado');    
+        
+        const aluno = {
+                nome:"", 
+                sobrenome:"", 
+                idade:"",
+
+                mostrarResultado: function(texto){
+                    this.nome = form.nome.value;
+                    this.sobrenome= form.sobrenome.value;
+                    this.idade = form.idade.value;
+                    resultado.textContent = `${texto}: ${this.nome} - Sobrenome: ${this.sobrenome} - Idade: ${this.idade}`;
+                    return "Aluno Cadastrado com Sucesso!"
+                }
+            };    
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            alert(aluno.mostrarResultado("Nome do Aluno"))
+
+        });
+
+    </script>
+    
+
+    <script src="cadastodealunos.js"></script>
+</body>
+</html>

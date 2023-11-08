@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.getElementById('teste').innerHTML = 'Teste Java innerHTML'"> click </button>
+    <p id="teste"></p>
+    <button onclick="document.getElementById('teste').style.color='red'"> click </button>
+
+    <br><br>
+
+    <button onclick="document.getElementById('teste2').innerHTML= '2+3'"> calcular</button>
+    <p id="teste2"></p>
+
+
+    <button onclick = "testejs()"> CLICK2
+    </button>
+
+    <script>
+        function testejs(){
+            document.getElementById("teste2").innerHTML= 'teste'
+        }
+    </script>
+
+    <p id="teste4">
+        <script>
+            let teste = 6
+            teste ++
+
+            document.getElementById("teste4").innerHTML = teste
+        </script>
+    </p>
+
+    <script>
+        function multiplicarDoisNumeros(num1, num2){
+            const resposta = num1 * num2
+    
+            document.getElementById("resultado").innerHTML = resposta
+    
+        }
+    </script>
+
+
+
+
+
+
+
+    <script>
+        function multiplicarDoisNumeros(2,2)
+        const resposta = num1 * num2
+
+        document.getElementById("resultado").innerHTML = resposta
+    
+    <p id ="resultado">
+        
+        document.getElementById("resultado").innerHTML = resposta
+    </p>
+
+
+    </script>
+
+<button onclick="multiplicarDoisNumeros(2,2)">
+
+    
+</button>
+
+</body>
+</html>
